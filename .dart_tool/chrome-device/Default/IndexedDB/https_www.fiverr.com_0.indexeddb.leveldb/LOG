@@ -1,0 +1,25 @@
+2023/02/02-13:35:44.602 35a8 Reusing MANIFEST C:\Users\user\AppData\Local\Temp\flutter_tools.66d95756\flutter_tools_chrome_device.c794742c\Default\IndexedDB\https_www.fiverr.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/02/02-13:35:44.603 35a8 Recovering log #15
+2023/02/02-13:35:44.603 35a8 Reusing old log C:\Users\user\AppData\Local\Temp\flutter_tools.66d95756\flutter_tools_chrome_device.c794742c\Default\IndexedDB\https_www.fiverr.com_0.indexeddb.leveldb/000015.log 
+2023/02/02-13:35:44.603 35a8 Delete type=2 #14
+2023/02/02-13:35:46.300 3cd4 Level-0 table #20: started
+2023/02/02-13:35:46.366 3cd4 Level-0 table #20: 3684 bytes OK
+2023/02/02-13:35:46.405 3cd4 Delete type=0 #15
+2023/02/02-13:35:46.406 3cd4 Manual compaction at level-0 from '\x00\x07\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x08\x00\x00\x00' @ 0 : 0; will stop at '\x00\x09\x01\x02\x03\x00\x00\x00\x00\x00\x00\xf0?' @ 309 : 1
+2023/02/02-13:35:46.424 3cd4 Compacting 1@0 + 1@1 files
+2023/02/02-13:35:46.496 3cd4 Generated table #21@0: 161 keys, 2363 bytes
+2023/02/02-13:35:46.496 3cd4 Compacted 1@0 + 1@1 files => 2363 bytes
+2023/02/02-13:35:46.535 3cd4 compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/02/02-13:35:46.536 3cd4 Delete type=2 #20
+2023/02/02-13:35:46.536 3cd4 Manual compaction at level-0 from '\x00\x09\x01\x02\x03\x00\x00\x00\x00\x00\x00\xf0?' @ 309 : 1 .. '\x00\x08\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/02/02-13:35:46.538 35a8 Level-0 table #23: started
+2023/02/02-13:35:46.586 35a8 Level-0 table #23: 481 bytes OK
+2023/02/02-13:35:46.614 35a8 Delete type=2 #17
+2023/02/02-13:35:46.614 35a8 Delete type=0 #19
+2023/02/02-13:35:46.615 35a8 Manual compaction at level-0 from '\x00\x06\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x07\x00\x00\x00' @ 0 : 0; will stop at '\x00\x06\x00\x00\x05' @ 353 : 0
+2023/02/02-13:35:46.615 35a8 Compacting 1@0 + 1@1 files
+2023/02/02-13:35:46.654 35a8 Generated table #24@0: 163 keys, 2389 bytes
+2023/02/02-13:35:46.654 35a8 Compacted 1@0 + 1@1 files => 2389 bytes
+2023/02/02-13:35:46.682 35a8 compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/02/02-13:35:46.682 35a8 Delete type=2 #23
+2023/02/02-13:35:46.683 35a8 Manual compaction at level-0 from '\x00\x06\x00\x00\x05' @ 353 : 0 .. '\x00\x07\x00\x00\x00' @ 0 : 0; will stop at (end)
