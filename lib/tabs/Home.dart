@@ -131,7 +131,7 @@ class _HomeState extends State<Home> {
                     Padding(
                         padding: EdgeInsets.only(top: 20),
                         child: Container(
-                          height: 450,
+                          height: 500,
                           child: GridView.count(
                             crossAxisCount: 2,
                             crossAxisSpacing: 12,

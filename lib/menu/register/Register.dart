@@ -279,14 +279,14 @@ class _RegisterState extends State<Register> {
         circularColor = Colors_selector.secondaryColor;
       });
 
-      var duration = const Duration(milliseconds: 3000);
-      sleep(duration);
+      // var duration = const Duration(milliseconds: 3000);
+      // sleep(duration);
       // Future.delayed(duration);
       const message = "Just a moment";
       Future.delayed(const Duration(milliseconds: 300), () {
         Fluttertoast.showToast(msg: message, fontSize: 18);
       });
-      Timer(Duration(seconds: 5), () {
+      Timer(const Duration(seconds: 2), () {
         Navigator.push(
             context, MaterialPageRoute(builder: (_) => const register1()));
       });

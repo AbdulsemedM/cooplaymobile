@@ -21,6 +21,7 @@ class _register3State extends State<register3> {
   File? image;
   File? image1;
   String dropdownvalue1 = 'Kebele ID';
+  Uint8List? exportedImage;
   SignatureController controller = SignatureController(
       penStrokeWidth: 4,
       exportBackgroundColor: Colors_selector.secondaryColor,
@@ -149,7 +150,7 @@ class _register3State extends State<register3> {
                                 ],
                               ),
                               const Padding(
-                                padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
+                                padding: EdgeInsets.fromLTRB(20, 0, 20, 10),
                                 child: Text(
                                   "Upload your ID",
                                   style: TextStyle(
@@ -230,8 +231,39 @@ class _register3State extends State<register3> {
                               Signature(
                                 controller: controller,
                                 width: 320,
-                                height: 200,
+                                height: 150,
                                 backgroundColor: Colors_selector.secondaryColor,
+                              ),
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Expanded(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: buildButton(
+                                          title: "save",
+                                          icon: Icons.save_alt,
+                                          onClicked: () async {
+                                            exportedImage =
+                                                await controller.toPngBytes();
+                                            setState(() {});
+                                          }),
+                                    ),
+                                  ),
+                                  Expanded(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: buildButton(
+                                          title: "clear",
+                                          icon: Icons.clear_all_outlined,
+                                          onClicked: () {
+                                            controller.clear();
+                                          }),
+                                    ),
+                                  )
+                                ],
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
@@ -276,10 +308,10 @@ class _register3State extends State<register3> {
   }) =>
       ElevatedButton(
         style: ElevatedButton.styleFrom(
-            minimumSize: Size.fromHeight(56),
+            minimumSize: Size.fromHeight(40),
             primary: Colors_selector.secondaryColor,
             onPrimary: Colors_selector.primaryColor,
-            textStyle: TextStyle(fontSize: 20)),
+            textStyle: const TextStyle(fontSize: 15)),
         onPressed: onClicked,
         child: Row(
           children: [
