@@ -27,35 +27,10 @@ class _SignupState extends State<Signup> {
   TextEditingController password = TextEditingController();
   TextEditingController cpassword = TextEditingController();
 
-  // String Fname = "";
-  // String Lname = "";
-  // String Pnumber = "";
-  // String Password = "";
-  // String Cpassword = "";
-  // String Rcode = "";
-
   Color circularColor = Colors_selector.pair1;
   TextEditingController rcode = TextEditingController();
   bool _passwordVisible1 = false;
   bool _passwordVisible = false;
-  // final GlobalKey<FormState> _form = GlobalKey<FormState>();
-  // final _formKey = GlobalKey<FormState>();
-  // String message = 'Password do not match!';
-  // void _trySubmitForm() {
-  //   final bool? isValid = _formKey.currentState?.validate();
-  //   if (isValid == true) {
-  //     debugPrint('Everything looks good!');
-  //     debugPrint(Pnumber);
-  //     debugPrint(Fname);
-  //     debugPrint(Lname);
-  //     debugPrint(Password);
-
-  //     /*
-  //     Continute proccessing the provided information with your own logic
-  //     such us sending HTTP requests, savaing to SQLite database, etc.
-  //     */
-  //   }
-  // }
 
   Signup() async {
     String pn = pnumber.text;
@@ -379,9 +354,7 @@ class _SignupState extends State<Signup> {
                         const EdgeInsets.symmetric(horizontal: 80, vertical: 5),
                     child: GestureDetector(
                       onTap: () {
-                        // validate(password, cpassword) ? Signup() : messages();
                         Signup();
-                        // _trySubmitForm();
                       },
                       child: Container(
                           padding: const EdgeInsets.all(5.0),
@@ -402,19 +375,4 @@ class _SignupState extends State<Signup> {
           ),
         ));
   }
-
-  // validate(password, cpassword) {
-  //   if (password == cpassword) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
-
-  // messages() {
-  //   Fluttertoast.showToast(msg: message, fontSize: 18);
-  //   setState(() {
-  //     circularColor = Colors_selector.pair1;
-  //   });
-  // }
 }
