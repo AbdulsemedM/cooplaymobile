@@ -77,6 +77,7 @@ class _ChallengesState extends State<Challenges> {
             Padding(
               padding: const EdgeInsets.fromLTRB(8, 16, 8, 6),
               child: Card(
+                color: Colors_selector.pair1,
                 child: ListTile(
                   onTap: () {
                     Navigator.push(
@@ -94,6 +95,7 @@ class _ChallengesState extends State<Challenges> {
             Padding(
               padding: const EdgeInsets.fromLTRB(8, 16, 8, 6),
               child: Card(
+                color: Colors_selector.pair1,
                 child: ListTile(
                   onTap: (() {
                     Navigator.push(
@@ -111,6 +113,7 @@ class _ChallengesState extends State<Challenges> {
             Padding(
               padding: const EdgeInsets.fromLTRB(8, 16, 8, 6),
               child: Card(
+                color: Colors_selector.pair1,
                 child: ListTile(
                   onTap: (() {
                     Navigator.push(
@@ -128,6 +131,7 @@ class _ChallengesState extends State<Challenges> {
             Padding(
               padding: const EdgeInsets.fromLTRB(8, 16, 8, 6),
               child: Card(
+                color: Colors_selector.pair1,
                 child: ListTile(
                   onTap: (() {
                     Navigator.push(
@@ -145,6 +149,7 @@ class _ChallengesState extends State<Challenges> {
             Padding(
               padding: const EdgeInsets.fromLTRB(8, 16, 8, 6),
               child: Card(
+                color: Colors_selector.pair1,
                 child: ListTile(
                   onTap: (() {
                     Navigator.push(
@@ -162,6 +167,7 @@ class _ChallengesState extends State<Challenges> {
             Padding(
               padding: const EdgeInsets.fromLTRB(8, 16, 8, 6),
               child: Card(
+                color: Colors_selector.pair1,
                 child: ListTile(
                   onTap: () {
                     Navigator.push(
@@ -179,6 +185,7 @@ class _ChallengesState extends State<Challenges> {
             Padding(
               padding: const EdgeInsets.fromLTRB(8, 16, 8, 6),
               child: Card(
+                color: Colors_selector.pair1,
                 child: ListTile(
                   onTap: (() {
                     Navigator.push(

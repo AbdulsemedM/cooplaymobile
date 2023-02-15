@@ -43,7 +43,7 @@ class _Login_pageState extends State<Login_page> {
     //   });
     //   final body =
     //       jsonEncode({"username": pnumber.text, "password": password.text});
-    //   var response = await http.post(Uri.http("localhost:8080", "/login"),
+    //   var response = await http.post(Uri.http("localhost:6000", "/login"),
     //       headers: {"Content-Type": "application/json"}, body: body);
 
     //   if (response.statusCode == 200) {
@@ -69,6 +69,7 @@ class _Login_pageState extends State<Login_page> {
         context: context,
         builder: (builder) {
           return AlertDialog(
+            backgroundColor: Colors_selector.pair2,
             title: Text('Choose Language'),
             content: Container(
               width: double.maxFinite,

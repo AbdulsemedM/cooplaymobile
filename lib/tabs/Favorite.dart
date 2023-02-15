@@ -30,11 +30,15 @@ class _FavoriteState extends State<Favorite> {
       setState(() {
         Colors_selector.pair1 = Color(0xff546e7a);
         Colors_selector.pair2 = Color(0xff90a4ae);
+        Colors_selector.primaryColor = Colors.cyan[900];
+        Colors_selector.primmary1 = Color(0xff006064);
       });
     } else {
       setState(() {
         Colors_selector.pair1 = Color(0xffe0f7fa);
         Colors_selector.pair2 = Color(0xffe1f5fe);
+        Colors_selector.primaryColor = Colors.cyanAccent[400];
+        Colors_selector.primmary1 = Color(0xff00e5ff);
       });
     }
   }
@@ -68,6 +72,7 @@ class _FavoriteState extends State<Favorite> {
         context: context,
         builder: (builder) {
           return AlertDialog(
+            backgroundColor: Colors_selector.pair2,
             title: Text('Choose Language'),
             content: Container(
               width: double.maxFinite,
@@ -322,8 +327,11 @@ class _FavoriteState extends State<Favorite> {
                           TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
                     ),
                     value: isOn,
-                    onChanged: (value) {
-                      isOn = !isOn;
+                    onChanged: (bool value) {
+                      setState(() {
+                        isOn = value;
+                      });
+                      // isOn = !isOn;
                       checkDarkMode(isOn);
                     }),
               ),
@@ -365,6 +373,7 @@ class _FavoriteState extends State<Favorite> {
         context: context,
         builder: (context) {
           return AlertDialog(
+            backgroundColor: Colors_selector.pair2,
             title: Text("Confirm Exit".tr),
             content: Text("Do you want to Logout?".tr),
             actions: <Widget>[

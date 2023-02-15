@@ -230,6 +230,7 @@ class _HomeState extends State<Home> {
       barrierDismissible: true,
       builder: (context) {
         return Dialog(
+            backgroundColor: Colors_selector.pair2,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             child: Padding(
@@ -301,6 +302,7 @@ class _HomeState extends State<Home> {
       barrierDismissible: true,
       builder: (context) {
         return Dialog(
+            backgroundColor: Colors_selector.pair2,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             child: Padding(

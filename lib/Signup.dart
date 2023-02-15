@@ -91,7 +91,7 @@ class _SignupState extends State<Signup> {
         ]
       });
       var response = await http.post(
-          Uri.http("localhost:8080", "/api/users/createUser"),
+          Uri.http("localhost:6000", "/api/users/createUser"),
           headers: {"Content-Type": "application/json"},
           body: body);
       print(response.body);

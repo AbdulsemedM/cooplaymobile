@@ -57,7 +57,10 @@ class _HomePageState extends State<HomePage> {
           ),
           elevation: 0.0,
           backgroundColor: Colors_selector.primaryColor,
-          title: Text(title[_selectedIndex].tr),
+          title: Text(
+            title[_selectedIndex].tr,
+            style: TextStyle(color: Colors_selector.secondaryColor),
+          ),
           automaticallyImplyLeading: false,
           centerTitle: true,
           actions: [
@@ -121,6 +124,7 @@ class _HomePageState extends State<HomePage> {
         context: context,
         builder: (context) {
           return AlertDialog(
+            backgroundColor: Colors_selector.pair2,
             title: Text("Confirm Exit".tr),
             content: Text("Do you want to Logout?".tr),
             actions: <Widget>[
