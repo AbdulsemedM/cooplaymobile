@@ -241,7 +241,8 @@ class _register3State extends State<register3> {
                                 children: [
                                   Expanded(
                                     child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
+                                      padding: const EdgeInsets.fromLTRB(
+                                          20, 10, 20, 0),
                                       child: buildButton(
                                           title: "save",
                                           icon: Icons.save_alt,
@@ -254,7 +255,8 @@ class _register3State extends State<register3> {
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
+                                      padding: const EdgeInsets.fromLTRB(
+                                          20, 10, 20, 0),
                                       child: buildButton(
                                           title: "clear",
                                           icon: Icons.clear_all_outlined,

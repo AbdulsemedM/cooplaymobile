@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 // import 'package:cached_network_image/cached_network_image.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:protest/Forgot_pw.dart';
 import 'package:protest/Settings/About_us.dart';
 import 'package:protest/Settings/PaS.dart';
 import 'package:protest/colors.dart';
@@ -23,6 +24,21 @@ class Favorite extends StatefulWidget {
 
 class _FavoriteState extends State<Favorite> {
   final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+  var isOn = false;
+  checkDarkMode(bool isOn) {
+    if (isOn == true) {
+      setState(() {
+        Colors_selector.pair1 = Color(0xff546e7a);
+        Colors_selector.pair2 = Color(0xff90a4ae);
+      });
+    } else {
+      setState(() {
+        Colors_selector.pair1 = Color(0xffe0f7fa);
+        Colors_selector.pair2 = Color(0xffe1f5fe);
+      });
+    }
+  }
+
   final List locale = [
     {'name': 'English', 'locale': Locale('en', 'US')},
     {'name': 'Afaan Oromoo', 'locale': Locale('or', 'ET')},
@@ -112,6 +128,7 @@ class _FavoriteState extends State<Favorite> {
               ),
               // SizedBox(height: 10),
               Card(
+                  color: Colors_selector.pair1,
                   elevation: 4,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
@@ -119,6 +136,7 @@ class _FavoriteState extends State<Favorite> {
                   child: Column(
                     children: [
                       Card(
+                        color: Colors_selector.pair1,
                         child: ListTile(
                           onTap: () {
                             Navigator.push(
@@ -147,6 +165,7 @@ class _FavoriteState extends State<Favorite> {
                         color: Colors_selector.grey,
                       ),
                       Card(
+                        color: Colors_selector.pair1,
                         child: GestureDetector(
                           onTap: () {
                             Navigator.push(
@@ -180,21 +199,31 @@ class _FavoriteState extends State<Favorite> {
                         color: Colors_selector.grey,
                       ),
                       Card(
-                        child: ListTile(
-                          shape: RoundedRectangleBorder(
-                            //<-- SEE HERE
-                            // side: BorderSide(width: 2),
-                            borderRadius: BorderRadius.circular(5),
+                        color: Colors_selector.pair1,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Forgot_pw()),
+                            );
+                          },
+                          child: ListTile(
+                            shape: RoundedRectangleBorder(
+                              //<-- SEE HERE
+                              // side: BorderSide(width: 2),
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            // hoverColor: Colors.orange[700],
+                            // selectedColor: Colors.orange[700],
+                            // tileColor: Colors.orangeAccent,
+                            title: Text("Change Password".tr),
+                            leading: Icon(
+                              Icons.lock_outline,
+                              color: Colors_selector.secondaryColor,
+                            ),
+                            trailing: Icon(Icons.edit),
                           ),
-                          // hoverColor: Colors.orange[700],
-                          // selectedColor: Colors.orange[700],
-                          // tileColor: Colors.orangeAccent,
-                          title: Text("Change Password".tr),
-                          leading: Icon(
-                            Icons.lock_outline,
-                            color: Colors_selector.secondaryColor,
-                          ),
-                          trailing: Icon(Icons.edit),
                         ),
                       ),
                       Container(
@@ -204,6 +233,7 @@ class _FavoriteState extends State<Favorite> {
                         color: Colors_selector.grey,
                       ),
                       Card(
+                        color: Colors_selector.pair1,
                         child: GestureDetector(
                           onTap: (() {
                             buildLanguageDialog(context);
@@ -231,6 +261,7 @@ class _FavoriteState extends State<Favorite> {
                         color: Colors_selector.grey,
                       ),
                       Card(
+                        color: Colors_selector.pair1,
                         child: ListTile(
                           shape: RoundedRectangleBorder(
                             //<-- SEE HERE
@@ -253,6 +284,7 @@ class _FavoriteState extends State<Favorite> {
                         color: Colors_selector.grey,
                       ),
                       Card(
+                        color: Colors_selector.pair1,
                         child: GestureDetector(
                           onTap: (() => _onBackButtonPressed(context)),
                           child: ListTile(
@@ -282,14 +314,18 @@ class _FavoriteState extends State<Favorite> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: SwitchListTile(
+                    secondary: Icon(Icons.dark_mode),
                     contentPadding: const EdgeInsets.fromLTRB(10, 5, 7, 4),
                     title: Text(
                       "Dark Theme".tr,
                       style:
                           TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
                     ),
-                    value: false,
-                    onChanged: (val) {}),
+                    value: isOn,
+                    onChanged: (value) {
+                      isOn = !isOn;
+                      checkDarkMode(isOn);
+                    }),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),

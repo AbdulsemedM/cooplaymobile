@@ -5,7 +5,7 @@ class Colors_selector {
   static final primmary1 = Color(0xff00e5ff);
   static final secondaryColor = Colors.amber;
   static final tertiaryColor = Colors.white;
-  static final pair1 = Color(0xffe0f7fa);
-  static final pair2 = Color(0xffe1f5fe);
+  static var pair1 = Color(0xffe0f7fa);
+  static var pair2 = Color(0xffe1f5fe);
   static final grey = Colors.grey;
 }
